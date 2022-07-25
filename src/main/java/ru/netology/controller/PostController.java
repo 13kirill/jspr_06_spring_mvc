@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.netology.model.Post;
 import ru.netology.service.PostService;
 
+import java.util.Collection;
 import java.util.List;
 
 @RestController
@@ -16,7 +17,7 @@ public class PostController {
   }
 
   @GetMapping
-  public List<Post> all() {
+  public Collection<Post> all() {
     return service.all();
   }
 
